@@ -55,7 +55,7 @@ if st.button("🔮 Predict"):
 
     # Fetch data
     end_date = datetime.today()
-    start_date = end_date - timedelta(days=101)
+    start_date = end_date - timedelta(days=150)
     df = yf.download(ticker, start=start_date, end=end_date)
 
     if df is None or df.empty:
