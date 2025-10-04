@@ -130,13 +130,12 @@ if st.button("🔮 Predict"):
             st.warning("⚠️ Could not save predictions. Check Snowflake connection and logs.")
 st.warning(
     """
-    ⚠️ **Disclaimer:**
-    The stock prices predicted by this app are based on historical data using an LSTM deep learning model.  
+    ⚠️ **Disclaimer:** 
     These predictions are **for educational and research purposes only** and **should not be considered as financial advice**.  
 
-    Stock markets are inherently volatile — actual prices may vary significantly due to real-world events,  
+    Stock markets are inherently volatile, actual prices may vary significantly due to real-world events,  
     market sentiment, economic factors, or company-specific developments.  
-    Always conduct your own analysis or consult a qualified financial advisor before making investment decisions.  
+    Always conduct your own analysis before making investment decisions.  
     """
 )
 
