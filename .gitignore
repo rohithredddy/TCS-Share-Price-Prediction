@@ -1,0 +1,64 @@
+# -------------------------
+# Python and Streamlit Project Git Ignore
+# -------------------------
+
+# Virtual environment folder
+venv/
+env/
+.venv/
+
+# Python cache and temporary files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+.eggs/
+
+# Jupyter / IPython
+.ipynb_checkpoints
+*.ipynb_save
+*.ipynb_checkpoints/
+
+# Streamlit secrets (critical)
+.streamlit/secrets.toml
+
+# Local environment files
+.env
+.env.*
+*.pem
+*.key
+*.cert
+.DS_Store
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+nohup.out
+
+# Model and large data files (optional — if too big for GitHub)
+# Uncomment below if keras_model.h5 > 50MB
+# keras_model.h5
+
+# Build or distribution artifacts
+build/
+dist/
+*.spec
+
+# OS generated files
+Thumbs.db
+desktop.ini
+
+# Temporary or backup files
+*~
+*.bak
+*.tmp
+*.old
