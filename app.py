@@ -55,7 +55,7 @@ if st.button("🔮 Predict"):
 
     # Fetch data
     end_date = datetime.today()
-    start_date = end_date - timedelta(days=200)
+    start_date = end_date - timedelta(days=101)
     df = yf.download(ticker, start=start_date, end=end_date)
 
     if df is None or df.empty:
@@ -125,6 +125,6 @@ if st.button("🔮 Predict"):
         creds = get_snowflake_creds()
         success = write_predictions_to_snowflake(future_df, table_name='TCS_PREDICTIONS', creds=creds)
         if success:
-            st.success("✅ Predictions saved to Snowflake Cloud Database!")
+            st.success("✅ Predictions saved to Database!")
         else:
             st.warning("⚠️ Could not save predictions. Check Snowflake connection and logs.")
