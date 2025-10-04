@@ -18,19 +18,6 @@ This web app predicts the next N-day closing prices of a stock using a trained L
 **Note:** the provided `keras_model.h5` was trained on TCS.NS data. Predictions for other tickers are experimental unless the model is retrained on them.
 """)
 
-st.warning(
-    """
-    ⚠️ **Disclaimer:**
-    The stock prices predicted by this app are based on historical data using an LSTM deep learning model.  
-    These predictions are **for educational and research purposes only** and **should not be considered as financial advice**.  
-
-    Stock markets are inherently volatile — actual prices may vary significantly due to real-world events,  
-    market sentiment, economic factors, or company-specific developments.  
-    Always conduct your own analysis or consult a qualified financial advisor before making investment decisions.  
-    """
-)
-
-
 # Input
 ticker = st.text_input("Enter Stock Symbol (e.g., TCS.NS, AAPL, INFY.NS):", "TCS.NS")
 days = st.slider("Prediction Horizon (days):", 1, 10, 5)
@@ -141,3 +128,15 @@ if st.button("🔮 Predict"):
             st.success("✅ Predictions saved to Database!")
         else:
             st.warning("⚠️ Could not save predictions. Check Snowflake connection and logs.")
+st.warning(
+    """
+    ⚠️ **Disclaimer:**
+    The stock prices predicted by this app are based on historical data using an LSTM deep learning model.  
+    These predictions are **for educational and research purposes only** and **should not be considered as financial advice**.  
+
+    Stock markets are inherently volatile — actual prices may vary significantly due to real-world events,  
+    market sentiment, economic factors, or company-specific developments.  
+    Always conduct your own analysis or consult a qualified financial advisor before making investment decisions.  
+    """
+)
+
